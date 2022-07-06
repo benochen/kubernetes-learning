@@ -8,5 +8,5 @@ spec:
     containers:
         - name: www
           image: nginx:alpine
-          nodeSelector: 
-            disktype: ssd
+    nodeSelector: 
+      disktype: ssd

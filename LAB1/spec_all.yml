@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: all
+spec:
+    containers:
+        - name: www
+          image: nginx:alpine
+        - name: alpine
+          image: alpine:3.16
+          command: ["sleep","3600"]

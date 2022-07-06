@@ -11,8 +11,8 @@ spec:
       podAffinity:
         requiredDuringSchedulingIgnoredDuringExecution:
         - labelSelector:
-          matchExpressions:
-          - key: app
-          operator: In
-          values:
-          - web
+            matchExpressions:
+              - key: app
+              operator: In
+              values:
+                - web

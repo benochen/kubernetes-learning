@@ -8,6 +8,7 @@ spec:
           image: alpine:3.16
           command: ["sleep","3600"]
     affinity:
+    
       podAffinity:
         requiredDuringSchedulingIgnoredDuringExecution:
         - labelSelector:
@@ -16,4 +17,4 @@ spec:
               operator: In
               values:
                 - web
-      topologyKey: kubernetes.io/hostname
+        topologyKey: kubernetes.io/hostname

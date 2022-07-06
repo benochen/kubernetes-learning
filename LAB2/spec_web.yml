@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-   name: lab2_web
+   name: lab2Web
    labels:
     app: web
 spec:

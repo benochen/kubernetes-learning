@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-   name: alpine
+   name: lab2_alpine
 spec:
     containers:
         - name: alpine

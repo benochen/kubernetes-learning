@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: DeamonSet
+metadata:
+   name: debug-lab4
+   labels:
+    app: debug
+spec:
+    replicas: 3
+    selector:
+        matchLabels:
+            app: debug
+    template:
+        metadata:
+            labels:
+                app: debug
+        spec:
+            containers:
+            - name: debug
+              image: alpine:3.16

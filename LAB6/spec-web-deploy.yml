@@ -16,7 +16,7 @@ spec:
         spec:
             containers:
             - name: www
-              image: httpd:alpin
+              image: httpd:alpine
               ports:
               - containerPort: 80
               volumeMounts:

@@ -16,7 +16,7 @@ spec:
               image: alpine:3.16
               volumeMounts:
               - name: web
-                mountPath: /web
+                mountPath: /mnt
               command: ["/bin/sh","-c","while true ; do echo `date` `hostname` >> /mnt/index.html ; sleep 60 ; done"]
             volumes:
             - name: web

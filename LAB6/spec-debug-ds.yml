@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+   name: producteur-lab6
+spec:
+    selector:
+        matchLabels:
+            app: producteur-lab6
+    template:
+        metadata:
+            labels:
+                app: producteur-lab6
+        spec:
+            containers:
+            - name: producteur-lab6
+              image: alpine:3.16
+              volumeMounts:
+              - name: web
+                mountPath: /web
+              command: ["/bin/sh","-c","while true ; do echo `date` `hostname` >> /mnt/index.html ; sleep 60 ; done"]
+            volumes:
+            - name: web
+              persistentVolumeClaim: 
+                claimName: web-claim
+
+

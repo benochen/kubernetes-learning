@@ -1,0 +1,24 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+   name: batch-lab9
+spec:
+    template:
+        metadata:
+            labels:
+                app: producteur-lab9
+        spec:
+            restartPolicy: OnFailure
+            containers:
+            - name: batch-lab9
+              image: alpine:3.16
+              volumeMounts:
+              - name: backup
+                mountPath: /mnt/backup
+              command: ["/bin/sh","-c","tar -cvf /var/log/messages /mnt/backup/`date`_`hostname`.bkp"]
+            volumes:
+            - name: backup
+              persistentVolumeClaim: 
+                claimName: backup-claim
+
+

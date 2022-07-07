@@ -1,0 +1,26 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+   name: init
+spec:
+    template:
+        metadata:
+            labels:
+                app: producteur-lab9
+        spec:
+            restartPolicy: OnFailure
+            containers:
+            - name: batch-init
+              image: alpine:3.16
+              env:
+                - name: DESTINATION_BACKUP
+                  valueFrom:
+                    configMapKeyRef:
+                      name: init-bkp
+                      key: destination
+            volumes:
+            - name: backup
+              persistentVolumeClaim: 
+                claimName: backup-claim
+
+

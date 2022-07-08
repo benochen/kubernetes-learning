@@ -1,12 +1,4 @@
 apiVersion: v1
-kind: PersistentVolume
+kind: ServiceAccount
 metadata:
-  name: web-pv
-spec:
-  capacity:
-    storage: 1Gi
-  accessModes:
-    - ReadWriteMany
-  nfs:
-    path: /home/shares/user5
-    server: 192.168.98.1
+  name: admin-user

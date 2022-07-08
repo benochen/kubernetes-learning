@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: ingress-domain
   annotations:
-    kubernetes.io/ingress.class: nginx
+    kubernetes.io/ingress.class: ingress-nginx
 spec:
   rules:
   - host: dep51.formation.local

@@ -6,7 +6,7 @@ metadata:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-  - host: user5a.formation.local
+  - host: dep51.formation.local
     http:
       paths:
       - pathType: Prefix
@@ -16,7 +16,7 @@ spec:
             name: lab12-httpd-service
             port:
               number: 80
-  - host: user5b.formation.local
+  - host: dep52.formation.local
     http:
       paths:
       - pathType: Prefix

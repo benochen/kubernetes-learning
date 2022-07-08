@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
    name: lab12-httpd-deployment
    labels:
-    app: web-httpd
+    app1: web-httpd
 spec:
     replicas: 1
     selector:
         matchLabels:
-            app: web-httpd
+            app1: web-httpd
     template:
         metadata:
             labels:
-                app: web-httpd
+                app1: web-httpd
         spec:
             containers:
             - name: web-httpd

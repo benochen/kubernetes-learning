@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
    name: lab12-nginx-deployment
    labels:
-    app: web-nginx
+    app2: web-nginx
 spec:
     replicas: 1
     selector:
         matchLabels:
-            app: web-nginx
+            app2: web-nginx
     template:
         metadata:
             labels:
-                app: web-nginx
+                app2: web-nginx
         spec:
             containers:
             - name: web-nginx

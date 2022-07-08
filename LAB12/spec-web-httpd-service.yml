@@ -4,7 +4,7 @@ metadata:
    name: lab12-httpd-service
 spec:
   selector:
-    app: web-httpd
+    app1: web-httpd
   type: ClusterIP
   ports:
     - port: 80

@@ -13,7 +13,7 @@ spec:
         path: "/"
         backend:
           service:
-            name: service1
+            name: lab12-httpd-service
             port:
               number: 80
   - host: user5b.formation.local
@@ -23,6 +23,6 @@ spec:
         path: "/"
         backend:
           service:
-            name: service2
+            name: lab12-nginx-service
             port:
               number: 80
